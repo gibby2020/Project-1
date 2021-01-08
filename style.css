@@ -1,0 +1,45 @@
+@import url(http://fonts.googleapis.com/css?family=Monoton);
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: minmax(100px, auto);
+    width: 461px;
+    height: 461px;
+    background: #3e4042;
+    margin: 15px auto;
+  }
+
+.box {
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    border-width: 2px;
+    border-color:black;
+    border-style: solid;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+
+h1 {
+  font-family: Monoton;
+  font-size: 48px;
+  text-align: center;
+}
+
+.controls {
+  text-align: center;
+}
+
+body {
+    text-align: center; 
+    background-color: rgb(113, 114, 116);
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
