@@ -3,7 +3,7 @@ let playerRed = true;
 let playerBlue = true;
 let replay = document.querySelector(".reset");
 let entries = [];
-// Advice from David during lab
+// Advice from David during class
 for (let i = 0; i < boxes.length; i++) {
     boxes[i].addEventListener("click", () => {
         if (boxes[i].style.backgroundColor != "blue" && boxes[i].style.backgroundColor != "red") {
