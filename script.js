@@ -1,4 +1,5 @@
-// let boxes = document.querySelectorAll(".box");
+let boxes = document.querySelectorAll(".box");
+console.log(boxes);
 // let playerRed = true;
 // let playerBlue = true;
 // let replay = document.querySelector(".reset");
