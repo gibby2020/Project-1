@@ -1,12 +1,30 @@
-let boxes = document.querySelectorAll(".box");
+const boxes = document.querySelectorAll(".box");
 console.log(boxes);
-// let playerRed = true;
-// let playerBlue = true;
+
+var boxOne = true;
+var turnedOver = false;
+
+function turnBox () {
+    if (this === boxOne) 
+    return;
+    this.classList.add("turn");
+    if (turnedOver) {
+        turnedOver = true;
+        boxOne = this;
+        return;
+    }
+}
+boxes.forEach(image => image.addEventListener("click", turnBox));
 // let replay = document.querySelector(".reset");
 // let entries = [];
-// // Advice from David during class
+
 // for (let i = 0; i < boxes.length; i++) {
-//     boxes[i].addEventListener("click", () => {
+//      boxes[i].addEventListener("click", showBox => {
+//          let showBox = function() {
+             
+//          }
+//      })
+//     }
 //         if (boxes[i].style.backgroundColor != "blue" && boxes[i].style.backgroundColor != "red") {
 //             if (playerRed) {
 //                 boxes[i].style.backgroundColor = "red";
