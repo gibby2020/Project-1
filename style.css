@@ -20,7 +20,7 @@ body {
   align-items: center;
   align-content: center;
   display: grid;
-  grid-template-columns: repeat(5, 4fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-auto-rows: auto;
 }
 
