@@ -6,8 +6,6 @@ let boxTwo = "null";
 let turnedOver = false;
 let freezeBoxes = false;
 
-
-
 function turnBox () {
     if (freezeBoxes = false)
         return;
@@ -25,9 +23,10 @@ function turnBox () {
     freezeBoxes = true;
 
     sameImage();
+        }
+    }
 }
-}
-}
+
 function sameImage() {
     let same1 = boxOne.dataset.index
     let same2 = boxTwo.dataset.index;
@@ -58,6 +57,5 @@ function lockBoxes() {
     boxOne = "null";
     boxTwo = "null";
 }
-
 
 boxes.forEach(image => image.addEventListener("click", turnBox));
