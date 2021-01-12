@@ -1,6 +1,13 @@
 const boxes = document.querySelectorAll(".box");
 console.log(boxes);
 
+(function randomize() {
+    boxes.forEach(image => {
+        var random = Math.floor(Math.random() * boxes.length);
+        image.style.order = random;
+    });
+})();
+
 var boxOne = null;
 var boxTwo = null;
 var same1 = null;
@@ -9,6 +16,7 @@ var turnedOver = false;
 var freezeBoxes = false;
 var counter = 0;
 var counterMatch = 0;
+
 
 function turnBox () {
     if (freezeBoxes = false)
