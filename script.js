@@ -68,6 +68,8 @@ function lockBoxes() {
     boxTwo = null;
     counterMatch = counterMatch + 1;
     console.log(counterMatch);
+    const mainHeading = document.querySelector("h1");
+    mainHeading.textContent = "Memory Game - You Have Attempted " + counter + " Matches and Achieved " + counterMatch + " Matches of Ten!";
 }
 
 
