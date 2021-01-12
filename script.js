@@ -32,8 +32,11 @@ function sameImage() {
     let same1 = boxOne.dataset.index
     let same2 = boxTwo.dataset.index;
     console.log(same1, same2);
-    if (same1 !== same2)
-    turnBoxOver();
+    if (same1 === same2)
+        lockBoxes();
+    else {
+        turnBoxOver();
+    }
 }
 
 function turnBoxOver() {
@@ -46,5 +49,15 @@ function turnBoxOver() {
         boxTwo = "null";
     }, 1000);
 }
+
+function lockBoxes() {
+    boxOne.removeEventListener("click", turnBox);
+    boxTwo.removeEventListener("click", turnBox);
+    turnedOver = false;
+    freezeBoxes = false;
+    boxOne = "null";
+    boxTwo = "null";
+}
+
 
 boxes.forEach(image => image.addEventListener("click", turnBox));
