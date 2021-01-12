@@ -28,6 +28,8 @@ function turnBox () {
     freezeBoxes = true;
     counter = counter + 1;
     console.log(counter);
+    const mainHeading = document.querySelector("h1");
+    mainHeading.textContent = "Memory Game - You Have Attempted " + counter + " Matches and Achieved " + counterMatch + " Matches of Ten!";
     sameImage();
         }
     }
