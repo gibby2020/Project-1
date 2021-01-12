@@ -28,7 +28,7 @@ body {
     height: 400px;
     position: relative;
     margin: auto;
-    transition: all 1s;
+    transition: all .1s;
     transform-style: preserve-3d;
     transform: scale(1);
   }
