@@ -58,6 +58,7 @@ function sameImage() {
         return;
     }
 }
+
 function turnBoxOver() {
     setTimeout(() => {
         boxOne.classList.remove("turn");
@@ -66,7 +67,6 @@ function turnBoxOver() {
         freezeBoxes = false;
         boxOne = null;
         boxTwo = null;
-
     }, 1000);
 }
 
@@ -82,4 +82,5 @@ function lockBoxes() {
     const mainHeading = document.querySelector("h1");
     mainHeading.textContent = "Memory Game - You Have Attempted " + counter + " Matches and Achieved " + counterMatch + " Matches of Ten!";
 }
+
 boxes.forEach(image => image.addEventListener("click", turnBox));
