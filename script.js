@@ -1,31 +1,32 @@
 const boxes = document.querySelectorAll(".box");
 console.log(boxes);
 
-let boxOne = "";
-let boxTwo = "";
-let turnedOver = false;
-let freezeBoxes = false;
-let counter = 0;
-let counterMatch = 0;
-
+var boxOne = null;
+var boxTwo = null;
+var same1 = null;
+var same2 = null;
+var turnedOver = false;
+var freezeBoxes = false;
+var counter = 0;
+var counterMatch = 0;
 
 function turnBox () {
     if (freezeBoxes = false)
         return;
         else {
-    if (this === boxOne)
+    if (this == boxOne)
         return;
         else {
     this.classList.add("turn");
-    if (turnedOver !== true) {
+    if (turnedOver != true) {
         turnedOver = true;
         boxOne = this;
         return;
     }
 
-
     boxTwo = this;
     freezeBoxes = true;
+    turnedOver = false;
     counter = counter + 1;
     console.log(counter);
     const mainHeading = document.querySelector("h1");
@@ -36,10 +37,10 @@ function turnBox () {
 }
 
 function sameImage() {
-    let same1 = boxOne.dataset.index;
-    let same2 = boxTwo.dataset.index;
+    var same1 = boxOne.dataset.index;
+    var same2 = boxTwo.dataset.index;
     console.log(same1, same2);
-    if (same1 === same2) {
+    if (same1 == same2) {
         lockBoxes();
         return;
     }
@@ -48,7 +49,6 @@ function sameImage() {
         return;
     }
 }
-
 function turnBoxOver() {
     setTimeout(() => {
         boxOne.classList.remove("turn");
@@ -73,6 +73,5 @@ function lockBoxes() {
     const mainHeading = document.querySelector("h1");
     mainHeading.textContent = "Memory Game - You Have Attempted " + counter + " Matches and Achieved " + counterMatch + " Matches of Ten!";
 }
-
 
 boxes.forEach(image => image.addEventListener("click", turnBox));
