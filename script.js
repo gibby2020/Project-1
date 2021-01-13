@@ -49,11 +49,13 @@ function sameImage() {
     var same2 = boxTwo.dataset.index;
     console.log(same1, same2);
     if (same1 == same2) {
+        console.log("cardsMatch");
         lockBoxes();
         console.log(boxes);
         return;
     }
     else {
+        console.log("cardsDontMatch");
         turnBoxOver();
         return;
     }
@@ -61,6 +63,7 @@ function sameImage() {
 
 function turnBoxOver() {
     setTimeout(() => {
+        console.log("turnBoxOver");
         boxOne.classList.remove("turn");
         boxTwo.classList.remove("turn");
         turnedOver = false;
@@ -71,6 +74,7 @@ function turnBoxOver() {
 }
 
 function lockBoxes() {
+    console.log("lockBox");
     boxOne.removeEventListener("click", turnBox);
     boxTwo.removeEventListener("click", turnBox);
     turnedOver = false;
