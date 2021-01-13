@@ -13,7 +13,7 @@ Preview:
 This game is a 20-box/10-image memory game that allows you to turn two boxes at a time, locks the boxes if you match two images, turns both boxes back if they don't match, keeps score of the number of attempts & achieved matches, and you win once all ten matches are achieved.
 
 Randomized image screen shot - https://github.com/gibby2020/Project-1/blob/main/images/Screen%20Shot%202021-01-12%20at%209.59.47%20AM.png
-Screen shot of game in progress - https://github.com/gibby2020/Project-1/blob/main/images/Screen%20Shot%202021-01-12%20at%2010.02.26%20AM.png
+Screen shot of game in progress - https://github.com/gibby2020/Project-1/blob/main/images/Screen%20Shot%202021-01-12%20at%2010.07.02%20AM.png
 
 Technology used:
 Javascript, CSS and HTML.
